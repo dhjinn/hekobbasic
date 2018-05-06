@@ -1,5 +1,5 @@
-<h2> Create new event </h2>
-<%= simple_form_for @event, :url => create_path do |f| %>
+<h2> Edit event info </h2>
+<%= simple_form_for @event, :url => update_path do |f| %>
   <%= f.input :name, label: 'Class Title/Name', placeholder: 'Basic Outdoor Photography', required: true %>
   <%= f.input :price, label: 'Cost Per Student', placeholder: '75.00', required: true %>
   <%= f.input :max, label: 'Max Class Size', placeholder: '10', required: true %>
