@@ -1,0 +1,18 @@
+<h1> Teacher Dashboard </h1>
+<p> Email: <%= @teacher.email %> </p>
+
+<%= link_to "Create a new event", new_event_path, :class => "button medium" %>
+
+<%= week_calendar number_of_weeks: 2 do |date| %>
+	<%= date %>
+<% end %>
+
+<h3> Events </h3>
+	<% @teacher.events.each do |event| %>
+		Name: <%= event.name %> | Price: <%= event.price %> | 
+		Class Size: <%= event.max %> | Duration: <%= event.duration %> | 
+		Instructor: <%= event.instructor %> | Topic: <%= event.topic %> | 
+		Provided Materials: <%= event.provided %> | Prerequisites: <%= event.prerequisites %> | 
+		When: <%= event.when %> <br/>
+	<% end %> 
+

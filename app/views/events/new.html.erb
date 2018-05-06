@@ -1,0 +1,15 @@
+<%= simple_form_for @event, :url => create_path do |f| %>
+  <%= f.input :name, label: 'Class Title/Name', placeholder: 'Basic Outdoor Photography', required: true %>
+  <%= f.input :price, label: 'Cost Per Student', placeholder: '75.00', required: true %>
+  <%= f.input :max, label: 'Max Class Size', placeholder: '10', required: true %>
+  <%= f.input :duration, label: 'Class Duration (in minutes)', placeholder: '10', required: true %>
+  <%= f.input :instructor, label: 'A little about yourself. Why are you qualified to teach this class?', placeholder: 'My name is John Smith. I have 5 years of experience in doing photography for major magazines', required: true, :input_html => {:size => 100} %>
+  <%= f.input :topic, label: 'Topic (What are studengs going to be learning?)', placeholder: 'Basics of adjusting aperture, how to match your ISO to your lighting, manual vs. auto focusing', required: true, :input_html => {:size => 100} %>
+  <%= f.input :provided, label: 'Provided materials (what will you as the instructor provide for the class)', placeholder: 'staging platforms, reflectors, photo umbrella', :input_html => {:size => 100} %>
+  <%= f.input :prerequisites, label: 'Student Prerequisites (what experience should students have', placeholder: 'Used a DSLR before, understands basic functions of a DSLR', required: true, :input_html => {:size => 100} %>
+  <%= f.input :materials, label: 'Student Materials (what does a student need to bring to the class)', placeholder: 'Own DSLR camera, extra batteries and memory cards', :input_html => {:size => 75} %>
+  <%= f.input :when, label: 'Class Time', required: true %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Cancel", teacher_path(current_teacher.id), :class => "button medium"%>

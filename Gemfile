@@ -51,6 +51,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml'
+gem 'html2haml'
 gem 'cancan'
 gem 'devise'
 gem 'simple_calendar', '~> 2.0'
+gem 'simple_form'

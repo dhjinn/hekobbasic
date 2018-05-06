@@ -1,0 +1,7 @@
+%h1 Welcome to Hekob
+- if teacher_signed_in?
+  .welcome= link_to "Go To Dashboard", teacher_path(current_teacher.id), :class => 'button_to'
+- else
+  .welcome= link_to "Teacher Sign up", new_teacher_registration_path, :class => 'button_to'
+  .welcome= link_to "Teacher Login", new_teacher_session_path, :class => 'button_to'
+%p
